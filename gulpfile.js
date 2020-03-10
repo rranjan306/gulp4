@@ -39,9 +39,9 @@ gulp.task('webserver', function() {
 
 gulp.task('del', function(done) {
   del.sync(['dest']);
-  done()
+  done();
 });
 
 
 gulp.task('build', gulp.series(['copyHTML', 'vendorCSS', 'vendorJS', 'scss']));
-gulp.task('default', gulp.series(['del', 'build']));
+gulp.task('clean', gulp.series(['del']));
